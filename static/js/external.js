@@ -3,9 +3,9 @@
 mapboxgl.accessToken = 'pk.eyJ1Ijoic2FtdGFrb3kiLCJhIjoiY2t1bnV6a3I0MDhpMjJ3bWRuM3ZlOWtkNyJ9.x-9fPtL0GdB1Zjwmi1jlAg';
       const map = new mapboxgl.Map({
         container: 'mapid', // container id
-        style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-        center: [37.6155600, 55.7522200], // starting position
-        zoom: 10 // starting zoom
+        style: 'mapbox://styles/mapbox/streets-v11', // стиль отображения карты
+        center: [37.6155600, 55.7522200], // стартовая позиция карты
+        zoom: 10 // стартовый зум карты
       });
 
 
@@ -32,7 +32,7 @@ map.on('load', () => {
                     ]
             }
         });
-//-- Слой с адм округами берется из geojson файла. Пока выключил.
+//-- Слой с адм округами берется из geojson файла. Пока выключено
   map.addLayer({
             id: 'mos_distr',
             type: 'fill',
@@ -64,9 +64,7 @@ map.on('load', () => {
               data: mfc
             },
             layout: {
-                'visibility': 'visible'
-             // 'icon-image': 'hospital-15',
-            //  'icon-allow-overlap': true
+                'visibility': 'visible'             
             },
             paint: {
                 'circle-color': 'red'
