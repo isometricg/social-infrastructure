@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- mapbox-gl  -->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v2.5.0/mapbox-gl.css" rel="stylesheet"   />
+    <!-- turf  -->
+    <script src="https://api.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/css/style.css" type="text/css"/ >
+
+    <title>Социальная инфраструктура</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Главная</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="about.html">О нас</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <h1 style="font: 16px 'Helvetica Neue', Arial, Helvetica, sans-serif; color: brown; text-align: center; padding: 10px;">Сервис по размещению городской или частной социальной инфраструктуры</h1>
+
+        <div id="mapid" style="height: 512px;	width: auto;">
+		
+            <div id="menu" style="position: absolute;z-index: 1;width: auto; top: 10px;right: 10px; padding: 5px; font-family: 'Open Sans', sans-serif; " >
+            <input id="mfc" type="button" name="rtoggle" value="МФЦ" >
+            <input id="razb_distr" type="button" name="rtoggle" value="Сектор" >
+            <!--<input id="mos_distr" type="button" name="rtoggle" value="Район" > Кнопка отображения АО пока не нужна  -->
+            <input id="nearest-mfс" type="button" name="rtoggle" value="Ближайший МФЦ к сектору" >
+            <input id="pokritie" type="button" name="rtoggle" value="Покрытие" >
+
+
+        </div>
+		<div id="legend" class="legend" >
+
+                    <h4>Расстояние до МФЦ</h4>
+                    <div><span style="background-color: #723122"></span>3000 метров</div>
+                    <div><span style="background-color: #8b4225"></span>2500 метров</div>
+                    <div><span style="background-color: #a25626"></span>2000 метров</div>
+                    <div><span style="background-color: #b86b25"></span>1500 метров</div>
+                    <div><span style="background-color: #ca8323"></span>1300 метров</div>
+                    <div><span style="background-color: #da9c20"></span>1000 метров</div>
+                    <div><span style="background-color: #e6b71e"></span>800 метров</div>
+                    <div><span style="background-color: #eed322"></span>400 метров</div>
+                    <div><span style="background-color: #f2f12d"></span>100 метров</div>
+         </div>
+
+        <script src="./static/geodata/admzones2021.js"></script>
+        <script src="./static/geodata/MFC_02.js"></script>
+        <script src="./static/geodata/fishnet2021_urez.js"></script>
+        <script src="./static/js/external.js"></script>
+
+    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  -->
+  </body>
+</html>
